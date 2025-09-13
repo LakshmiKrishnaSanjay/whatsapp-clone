@@ -27,9 +27,16 @@ const handleLogout = async () => {
         <img
           src={auth.currentUser?.photoURL}
           alt="Profile"
-          className="w-10 h-10 rounded-full"
+          className="w-10 h-10 rounded-full  "
         />
       </Link>
+
+<div className="flex-grow ">
+  <h1 className=" ml-2 text-m font-bold text-gray-800">
+    {auth.currentUser?.displayName}
+  </h1>
+</div>
+
 
       {/* Icons */}
       <div className="flex items-center gap-4 text-gray-600">

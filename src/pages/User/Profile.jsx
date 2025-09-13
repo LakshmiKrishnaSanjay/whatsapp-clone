@@ -111,33 +111,17 @@ const handleSaveName = async () => {
   return (
     <div className="min-h-screen bg-sky-50 flex justify-center items-start pt-20">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md flex flex-col items-center">
-        <h2 className="text-3xl font-bold text-sky-900 mb-6 text-center">User Profile</h2>
+        <h2 className="text-3xl font-bold text-sky-900 mb-6 text-center">Profile</h2>
 
         {/* Profile Image */}
         <div className="flex flex-col items-center mb-6">
           <img
             src={preview}
             alt="Profile"
-            className="w-32 h-32 rounded-full border-4 border-gray-300 shadow-md object-cover mb-3"
+            className="w-32 h-32 rounded-full border-4 border-gray-300 shadow-md object-cover "
           />
-          <div className="flex gap-2">
-            <label className="cursor-pointer text-sky-600 hover:underline">
-              Change
-              <input type="file" className="hidden" accept="image/*" onChange={handleChangeImage} />
-            </label>
-            <button onClick={handleRemoveImage} className="text-red-600 hover:underline">
-              Remove
-            </button>
-          </div>
-          {selectedFile && (
-            <button
-              onClick={handleSaveImage}
-              disabled={saving}
-              className="mt-3 bg-sky-900 text-white px-4 py-2 rounded-md hover:bg-sky-800 transition"
-            >
-              {saving ? "Saving..." : "Save Image"}
-            </button>
-          )}
+
+
         </div>
 
         {/* Editable Name */}
