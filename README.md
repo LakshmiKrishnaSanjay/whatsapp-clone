@@ -10,6 +10,7 @@ It supports authentication, user profiles, contact search, and real-time chat.
 - Editable user profile (name)  
 - Contacts / Users list with search  
 - One-to-one chats with real-time updates  
+- Message timestamps displayed under each chat message  
 ---
 
 ## Features Not Implemented
