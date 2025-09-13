@@ -12,6 +12,28 @@ It supports authentication, user profiles, contact search, and real-time chat.
 - One-to-one chats with real-time updates  
 ---
 
+## Features Not Implemented
+
+- Email + Password Authentication (since PDF says both Google + Email/Password).
+- Presence (last seen / online status)
+- Message status (sent / delivered / seen)
+- Media upload/sharing — attempted but faced CORS policy errors with Firebase Storage
+
+- SonarQube Setup (static code analysis not included)  
+- OpenAPI (Swagger) API Documentation (not included)  
+
+
+##  Known Issues
+- Media upload failed due to **CORS policy errors** with Firebase Storage.  
+  - I attempted to fix this by downloading and setting up the **Google Cloud SDK** and applying a CORS configuration:
+    ```bash
+    gsutil cors set cors.json gs://<your-storage-bucket>
+    ```
+  - Despite applying the rules, uploads were still blocked by the browser.  
+
+ Because of this blocker, **media upload/sharing is not functional** in the current build.
+
+
 ## ⚙️ Installation & Setup
 
 1. Clone the repository:
@@ -23,7 +45,7 @@ It supports authentication, user profiles, contact search, and real-time chat.
 
 npm install
 
-3. src/firebase/setup.js
+3. create src/firebase/setup.js
 
 
 import { initializeApp } from "firebase/app";
@@ -52,3 +74,10 @@ export default app;
 4. Run 
 
 npm run dev
+
+5. Deployment Notes (Firebase Hosting)
+
+npm run build
+firebase login
+firebase init hosting
+firebase deploy
