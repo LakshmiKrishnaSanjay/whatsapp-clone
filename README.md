@@ -61,7 +61,7 @@ const firebaseConfig = {
   storageBucket: "******",
   messagingSenderId: "******",
   appId: "******",
-  measurementId: "******F"
+  measurementId: "******"
 };
 
 
