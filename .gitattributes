@@ -1,0 +1,16 @@
+# Ignore heavy or auto-generated folders
+node_modules/** linguist-vendored
+build/** linguist-generated=true
+
+# Ignore Firebase config and JSON files from stats
+firebase.json linguist-generated=true
+.firebaserc linguist-generated=true
+*.json linguist-generated=true
+
+# Treat JS/JSX as JavaScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+
+# Ignore service worker or manifest files (optional)
+service-worker.js linguist-generated=true
+manifest.json linguist-generated=true
